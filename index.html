@@ -22,5 +22,28 @@
     <footer>
         <p>© 2026 WebChat. All rights reserved.</p>
     </footer>
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+                embeddedservice_bootstrap.init(
+                    '00DVE000009G388',
+                    'Web_Service_Deployment',
+                    'https://warrencat--partial.sandbox.my.site.com/ESWWebServiceDeployment1775854308432',
+                    {
+                        scrt2URL: 'https://warrencat--partial.sandbox.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script 
+        type='text/javascript' 
+        src='https://warrencat--partial.sandbox.my.site.com/ESWWebServiceDeployment1775854308432/assets/js/bootstrap.min.js' 
+        onload='initEmbeddedMessaging()'
+    ></script>
 </body>
 </html>
